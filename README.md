@@ -77,6 +77,8 @@ services:
     2. 通过 nsqlookupd 查询 当前消息所在的 nsqd
 #### 注意事项:
 - Producer短线后不会重连,Consumer断线后会自动重连
+- 在AddConurrentHandlers和 AddHandler中设置的接口回调是在另外的goroutine中执行的  (注意只有一个goruntime)
+
   
 
       

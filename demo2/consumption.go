@@ -22,6 +22,7 @@ func main() {
 //处理消息
 func (*ConsumerT) HandleMessage(msg *nsq.Message) error {
 	fmt.Println("receive", msg.NSQDAddress, "message:", string(msg.Body))
+	time.Sleep(time.Second * 10)
 	return nil
 }
 
